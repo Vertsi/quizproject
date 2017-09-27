@@ -9,26 +9,24 @@
 <link href="/static/style.css" rel="stylesheet">
 </head>
 <body>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 column1">
 	<h1>Du är klar och fick {{ correct }} av {{ total }}</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 </div>
+
 		<div class="row">
-			<div class="col-md-4 column2"><h2>Quiz 1</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<p>Här kommer en <a href="quiz.html">Länk till quiz</a>.</p>
+			{% for quiz in quizzes %}
+			<div class="col-md-4 column2"><h2>{{ quiz.name }}</h2>
+				<p>{{ quiz.description }}</p>
+				<p>Gå till <a href="{% url 'quiz_page' quiz.quiz_number %}"> {{ quiz.name }} </a>spelet</p>
 			</div>
-			<div class="col-md-4 column3"><h2>Quiz 2</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<p>Här kommer en <a href="quiz.html">Länk till quiz</a>.</p>
-			</div>
-			<div class="col-md-4 column4"> <h2>Quiz 3</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<p>Här kommer en <a href="quiz.html">Länk till quiz</a>.</p>
-			</div>
-	</div>
+			{% endfor %}		
+		</div>
+		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
 	</script>
 	<script src="js/bootstrap.min.js"></script>

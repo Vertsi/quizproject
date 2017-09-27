@@ -17,9 +17,8 @@
   		<input type="radio" name="gender" value="male" checked> {{ answer1 }}<br>
   		<input type="radio" name="gender" value="female"> {{ answer2 }}<br>
   		<input type="radio" name="gender" value="other"> {{ answer3 }}<br><br>
-  		 <input type="submit" value="Nästa fråga"><br><br>
-
 	</form>
+	  <a href="{% url 'completed_page' quiz_number %}"><input type="submit" Value="Nästa fråga"></a>
 	</div>
 </div>
 	</div>

@@ -46,6 +46,7 @@ def completed(request, quiz_number):
 	context = {
 		"correct": 12,
 		"total": 20,
-		"quiz_number": quiz_number, 
+		"quiz_number": quiz_number,
+		"quizzes": quizzes, 
 	}
 	return render(request, "results.html", context)

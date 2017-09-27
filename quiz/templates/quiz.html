@@ -13,8 +13,9 @@
 		<div class="row">
 			<div class="col-md-12 column1">
 	<h1> Spela frågespel "{{ quiz.name }}"</h1>
-		<p>{{ quiz.description }} Testa dina kunskaper!</p>
-	<input type="submit" value="Starta spelet"><br><br>
+		<p>{{ quiz.description }} Testa dina kunskaper!</p>	
+        <a href="{% url 'question_page' quiz_number 1 %}"><input type="submit" Value="Starta spelet"></a>
+      
 	</div>
 </div>
 	</div>
