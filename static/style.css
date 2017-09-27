@@ -1,32 +1,89 @@
+
 body {
-	background: rgb(255, 255, 255);
-	font-size: 9pt;
-	font-family: Helvetica;	
+	background: rgb(240, 240, 240);
+	font-size: 12pt;
+	font-family: Helvetica;
+	color: rgb(255, 255, 255);	
 }
 h1 {
-	color: rgb(0, 0, 0);
+	font-size: 36pt;
+	font-weight: bold;
+	max-width: 800px; 
+}
+h2 {
+	font-size: 20pt;
+	max-width: 800px;
+}
+p {
+	padding-bottom: 5px; 
+	color: rgb(255, 255, 255);
+	max-width: 800px;
 }
 a {
 	color: rgb(51, 102, 255);
 }
-p {
-	padding-bottom: 5px; 
-}
+
+.image1 {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 350px;
+} 
+
+.image2 {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 200px;
+} 
+
+.image3 {
+    position: absolute;
+    margin: auto;
+    margin-left: 180px;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 200px;
+} 
+
 
 
 .column1 {
-	background: lightgrey;
-	min-height: 200px;
+	background: none;
+	background-image: url(/static/Barcelona.jpg);
+	min-height: 540px;
+	border: 2px solid rgb(211, 211, 211); 
+
 }
 .column2 {
-	background:lightpink;
+	background: lightblue;
 	height: 200px;
+	border: 2px solid rgb(211, 211, 211); 
+
 }
 .column3 {
-	background:lightpink;
+	background:lightyellow;
 	height: 200px;
 }
 .column4 {
-	background:lightpink;
+	background:lightblue;
 	height: 200px;
+}
+
+input[type="submit"] {
+    background-color: lightpink;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
