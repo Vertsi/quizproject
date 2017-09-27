@@ -1,0 +1,34 @@
+body {
+	background: rgb(255, 255, 255);
+	font-size: 9pt;
+	font-family: Helvetica;
+	
+}
+h1 {
+	color: rgb(0, 0, 0);
+}
+a {
+	color: rgb(51, 102, 255);
+}
+p {
+	border-bottom: 1px solid rgb(256, 256, 256);
+	padding-bottom: 5px; 
+}
+
+
+.column1 {
+	background: lightgray;
+	min-height: 200px;
+}
+.column2 {
+	background:lightpink;
+	height: 200px;
+}
+.column3 {
+	background:lightpink;
+	height: 200px;
+}
+.column4 {
+	background:lightpink;
+	height: 200px;
+}
