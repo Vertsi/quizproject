@@ -12,18 +12,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 column1">
-	<h1>Quiz time!</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<P> Du bogserar hem till sambos bil ute på Ekerö. Bogserlinan mellan er är över 2 meter. Vad bör du göra?  </P>
+	<h1>{{ question_number }}. {{ question }}</h1>
 <form>
-  		<input type="radio" name="gender" value="male" checked> Du får inte bogsera någon med en bogserlina på över 2 meter<br>
-  		<input type="radio" name="gender" value="female"> Du måste märka ut bogserlinan eftersom den är över 1,5 meter<br>
-  		<input type="radio" name="gender" value="other"> Du rekommenderas att märka ut bogserlinan, men det är inte ett måste<br>
-  		<input type="radio" name="gender" value="other"> Du måste märka ut bogserlinan eftersom den är över 2 meter<br><br>
-  		 <input type="submit" value="Submit"><br><br>
+  		<input type="radio" name="gender" value="male" checked> {{ answer1 }}<br>
+  		<input type="radio" name="gender" value="female"> {{ answer2 }}<br>
+  		<input type="radio" name="gender" value="other"> {{ answer3 }}<br><br>
+  		 <input type="submit" value="Nästa fråga"><br><br>
 
 	</form>
-<p>See your <a href="results.html">results</a>.</p>
 	</div>
 </div>
 	</div>
