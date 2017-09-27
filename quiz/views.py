@@ -13,7 +13,7 @@ quizzes = [
 	},
 	{
 		"quiz_number": 3, 
-		"name": "Världens mest kända hackare",	
+		"name": "Världens hackare",	
 		"description": "Kan du din hackershistoria?"
 	},
 ]
