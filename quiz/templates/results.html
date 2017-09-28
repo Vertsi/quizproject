@@ -15,7 +15,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 column1">
-	<h2 class = "text_over_image image1">Congratulations! You got {{ correct }} out of {{ total }} right.</h2>
+	<h2 class = "text_over_image image1">
+	{% if correct > 3 %}
+		Congratulations! You got {{ correct }} out of {{ total }} right.
+	{% elif correct > 1 %}
+		You did ok! You got {{ correct }} out of {{ total }} right.
+	{% else %}
+		Buhuu! You got {{ correct }} out of {{ total }} right. 
+	{% endif %}
+	</h2>
 		<p class = "text_over_image image2">Still think you know everything about Barcelona? Take another quiz to find out how well you really know the Ciutat Comtal or go back to <br>
  <a href="{% url 'start_page' %}"><input type="submit" Value="Start page"></a>
 	</p>
