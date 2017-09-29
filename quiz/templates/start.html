@@ -14,8 +14,17 @@
 		<div class="row">
 			<div class="col-md-12 column1">
 	<h1 class = "text_over_image image1">How well do you know Barcelona?</h1>
-		<p class = "text_over_image image2">Do you think you know everything about Barcelona? Take our quiz to find out how well you really know the Ciutat Comtal. Bona sort!<br>
+		<p class = "text_over_image image2">Do you think you know everything about Barcelona? Take our quiz to find out how well you really know the Ciutat Comtal. Bona sort!<br><br>	
 		</p>
+
+		<div class = "text_over_image image3">
+			{% for quiz in quizzes %}
+			<div>
+				<a href="{% url 'quiz_page' quiz.quiz_number %}"><input type="submit" Value="Take the {{ quiz.name }} quiz"></a>
+			</div>
+			{% endfor %}		
+		</div>
+
 	</div>
 </div>
 		<div class="row">

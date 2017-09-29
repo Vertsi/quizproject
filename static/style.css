@@ -14,7 +14,6 @@ h2 {
 }
 p {
 	padding-bottom: 5px; 
-	color: rgb(255, 255, 255);
 }
 a {
 	color: rgb(51, 102, 255);
@@ -30,38 +29,14 @@ a {
     text-align: center;
 }
 
-/*
-.image1 {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left:0;
-    right:0;
-    bottom:0;
-    height: 350px;
-} 
-
-.image2 {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left:0;
-    right:0;
-    bottom:0;
-    height: 200px;
-} */
-
 .image3 {
-    position: absolute;
-    margin: auto;
-    margin-left: 180px;
-    top: 0;
-    left:0;
-    right:0;
-    bottom:0;
-    height: 200px;
-} 
+    padding-top: 0%;
+    text-align: center;
+}
 
+.row {
+    padding-bottom: 10px;
+}
 
 
 .column1 {
@@ -69,21 +44,12 @@ a {
 	background-image: url(/static/Barcelona.jpg);
 	min-height: 540px;
 	border: 2px solid rgb(211, 211, 211); 
-
 }
 .column2 {
 	background: lightblue;
 	height: 200px;
 	border: 2px solid rgb(211, 211, 211); 
 
-}
-.column3 {
-	background:lightyellow;
-	height: 200px;
-}
-.column4 {
-	background:lightblue;
-	height: 200px;
 }
 
 input[type="submit"] {
