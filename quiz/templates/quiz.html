@@ -14,10 +14,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 column1">
-	<h1 class = "text_over_image image1">{{ quiz.name }}</h1>
-		<p class = "text_over_image image2">{{ quiz.description }}<br>	
+	<h1>{{ quiz.name }}</h1>
+		<p>{{ quiz.description }}</p>
+		<div>
         <a href="{% url 'question_page' quiz_number 1 %}"><input type="submit" Value="Take the quiz"></a></p>
-      
+      	</div>
 	</div>
 </div>
 	</div>

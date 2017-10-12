@@ -15,29 +15,32 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 column1">
-	<h2 class = "text_over_image image1">
+	<h1>
 	{% if correct > 2 %}
-		Congratulations! You got {{ correct }} out of {{ total }} right.
+		Wohooo! You got {{ correct }} out of {{ total }} right. &#x1F389;
 	{% elif correct > 1 %}
-		You did ok! You got {{ correct }} out of {{ total }} right.
+		Not bad! You got {{ correct }} out of {{ total }} right. &#x1F64C;
 	{% else %}
-		Oops! You got {{ correct }} out of {{ total }} right. 
+		Buhuu! You got {{ correct }} out of {{ total }} right. &#x1F62D;
 	{% endif %}
-	</h2>
-		<p class = "text_over_image image2">Still think you know everything about Barcelona? Take another quiz to find out how well you really know the Ciutat Comtal or go back to <br><br>
- <a href="{% url 'start_page' %}"><input type="submit" Value="Start page"></a>
-	</p>
+	</h1>
+		<p class = "text_over_image image2">Take another quiz to find out how well you know the Ciutat Comtal or hit back to home page.</p>
+		
+		<div>
+			{% for quiz in quizzes %}
+			<div>
+				<a href="{% url 'quiz_page' quiz.quiz_number %}"><input type="submit" Value="Take the {{ quiz.name }} quiz"></a>
+			</div>
+			{% endfor %}
+		</div><br>
+
+
+		<div>
+ <a href="{% url 'start_page' %}"><input type="submit" Value="Home page"></a><br><br>
+	</div>
 	</div>
 </div>
 
-		<div class="row">
-			{% for quiz in quizzes %}
-			<div class="col-md-4 column2"><h2>{{ quiz.name }}</h2>
-				<p>{{ quiz.description }}</p>
-				<a href="{% url 'quiz_page' quiz.quiz_number %}"><input type="submit" Value="Take the {{ quiz.name }} quiz"></a>
-			</div>
-			{% endfor %}		
-		</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
 	</script>

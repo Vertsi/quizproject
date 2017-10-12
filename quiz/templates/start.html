@@ -13,30 +13,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 column1">
-	<h1 class = "text_over_image image1">How well do you know Barcelona?</h1>
-		<p class = "text_over_image image2">Do you think you know everything about Barcelona? Take our quiz to find out how well you really know the Ciutat Comtal. Bona sort!<br><br>	
-		</p>
+	<h1>How well do you know Barcelona?</h1>
+		<p>Do you think you know everything about Barcelona? Take our quiz to find out how well you really know the Ciutat Comtal. Bona sort!</p>
 
-		<div class = "text_over_image image3">
+		<div>
 			{% for quiz in quizzes %}
 			<div>
 				<a href="{% url 'quiz_page' quiz.quiz_number %}"><input type="submit" Value="Take the {{ quiz.name }} quiz"></a>
 			</div>
-			{% endfor %}		
+			{% endfor %}
 		</div>
 
 	</div>
 </div>
-		<div class="row">
-			{% for quiz in quizzes %}
-			<div class="col-md-4 column2"><h2>{{ quiz.name }}</h2>
-				<p>{{ quiz.description }}</p>
-				<a href="{% url 'quiz_page' quiz.quiz_number %}"><input type="submit" Value="Take the {{ quiz.name }} quiz"></a>
-			</div>
-			{% endfor %}		
-		</div>
-        
-      
 	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
